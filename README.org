@@ -1,0 +1,30 @@
+#+TITLE: README.org
+#+AUTHOR: Taz (TZ) Syroid
+
+* SETUP
+
+** Quick SETUP
+https://github.com/tsyroid/emacs-efs.git
+
+** New Repo...
+#+begin_src shell
+echo "# emacs-efs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/tsyroid/emacs-efs.git
+git push -u origin main
+#+begin_src
+
+** Push from existing:
+#+begin_src shell
+git remote add origin https://github.com/tsyroid/emacs-efs.git
+git branch -M main
+git push -u origin main
+#+begin_src
+
+
+* Changelog
+
+** [2024-12-14 Sat 10:35] New repo
