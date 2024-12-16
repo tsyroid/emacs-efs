@@ -22,6 +22,7 @@
 (setq initial-frame-alist '((top . 80) (left . 80)
                             (width . 150) (height . 48)))
 
+(add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 ;; Default font
 (set-face-attribute 'default nil
                     :font "Iosevka Comfy"
@@ -30,8 +31,19 @@
 
 ;; Tabs are EVIL ;-)
 (setq-default indent-tabs-mode nil)
+(setq tab-width 4) ;; seems like a better default than the default
+
+;; Globals
+(global-visual-line-mode t) ;; for line wrap
+
+;; (global-display-line-numbers-mode 1)
+;; Display line numbers, but only in programming modes
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; Add to Emacs runtime path
+
+;; Configure runtime path to find lisp code
+(add-to-list 'load-path "~/.emacs.d/elisp/")
 
 
 ;; Don't generate backups or lockfiles. Please and thank you.
