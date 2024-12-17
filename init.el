@@ -40,8 +40,6 @@
 ;; Display line numbers, but only in programming modes
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
-;; Add to Emacs runtime path
-
 ;; Don't generate backups or lockfiles. Please and thank you.
 (setq create-lockfiles nil
       make-backup-files nil)
