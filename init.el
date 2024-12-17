@@ -40,10 +40,6 @@
 ;; Display line numbers, but only in programming modes
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
-;; Configure runtime path to find lisp code
-(add-to-list 'load-path "~/.emacs.d/elisp/")
-
-
 ;; Don't generate backups or lockfiles. Please and thank you.
 (setq create-lockfiles nil
       make-backup-files nil)
@@ -52,3 +48,9 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;; Configure runtime path to find lisp code
+(add-to-list 'load-path "~/.emacs.d/elisp/")
+
+;; Load Elpaca package manager
+(require 'elpaca-setup)
