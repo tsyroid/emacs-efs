@@ -40,9 +40,6 @@
 ;; Display line numbers, but only in programming modes
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
-;; Configure runtime path to find lisp code
-(add-to-list 'load-path "~/.emacs.d/elisp/")
-
 
 ;; Don't generate backups or lockfiles. Please and thank you.
 (setq create-lockfiles nil
@@ -52,3 +49,18 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;; Yasnippet
+(use-package yasnippet
+             :ensure t
+             :defer t
+             :config
+             (setq tab-always-indent 'complete)
+             (define-key yas-minor-mode-map (kbd "<escape>") 'yas-exit-snippet)
+             (setq yas-snippet-dirs '("~/.emacs.d/snippets/"))
+             (yas-global-mode 1)) ;; or M-x yas-reload-all if yasnippet started and config altered
+
+;; yasnippet-snippets - large community repo for yasnippets
+(use-package yassnippet-snippets
+             :ensure t
+             :defer t)
