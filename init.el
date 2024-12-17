@@ -66,7 +66,7 @@
              (yas-global-mode 1)) ;; or M-x yas-reload-all if yasnippet started and config altered
 
 ;; yasnippet-snippets - large community repo for yasnippets
-(use-package yassnippet-snippets
+(use-package yasnippet-snippets
              :ensure t
              :defer t)
 
