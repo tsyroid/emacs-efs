@@ -40,8 +40,6 @@
 ;; Display line numbers, but only in programming modes
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
-;; Add to Emacs runtime path
-
 ;; Configure runtime path to find lisp code
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 
