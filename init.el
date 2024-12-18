@@ -34,7 +34,12 @@
 (setq tab-width 4) ;; seems like a better default than the default
 
 ;; Globals
-(global-visual-line-mode t) ;; for line wrap
+;; (global-visual-line-mode t) ;; for line wrap
+;; NO: not global ;; enable for text-mode perhaps?
+;; This is also where we want to block out a bunch of
+;; set modes?
+;; (cua-mode t) always?
+;; (visual-line-mode t) if in text mode
 
 ;; (global-display-line-numbers-mode 1)
 ;; Display line numbers, but only in programming modes
